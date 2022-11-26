@@ -1,0 +1,13 @@
+{
+    "messages":[{
+        "id":"1",
+        "message":"wiadomosc",
+        "author":"Dominik"
+    },
+    {
+        "id":"2",
+        "message":"wiadomosc2",
+        "author":"Łukasz"     
+    }],
+    "users":[]
+}
