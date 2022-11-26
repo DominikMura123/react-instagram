@@ -27,8 +27,7 @@ export const removeMessage = (id) => {
 }  
 
 export const editingMessage = (editedMessage) =>{
-  console.log(editedMessage)
-  fetch(`${URLS.messages}/message`, {
+  return fetch(`${URLS.messages}/message`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json'

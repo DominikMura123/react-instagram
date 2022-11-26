@@ -43,7 +43,7 @@ function AddMessagePage(){
         setAuthorInput('');
         setMessageInput('');
         addMessage(newMessage)
-            .then(navigate('/'));
+            .then(() => navigate('/'));
     }
 
     return(

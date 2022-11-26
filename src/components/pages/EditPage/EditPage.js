@@ -54,8 +54,8 @@ function EditPage(){
 
         editingMessage(editMessage)
         setAuthorInput('');
-        setMessageInput('');
-        navigate('/')
+        setMessageInput('')
+          .then(() => navigate('/'));
       }
 
     return(
