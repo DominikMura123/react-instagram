@@ -1,7 +1,7 @@
 function MyInput(props){
     return(
         <input
-            type = "text" 
+            type = {props.type ? props.type : "text"}
             value = { props.value }  
             onChange = { props.onChange }
         />

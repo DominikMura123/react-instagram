@@ -8,6 +8,8 @@ import HomePage from './components/pages/HomePage/HomePage.js';
 import AddMessagePage from './components/pages/AddMessagePage/AddHomePage.js';
 import About from 'components/pages/About/About.js';
 import EditPage from 'components/pages/EditPage/EditPage.js'
+import LoginPage from 'components/pages/LoginPage/LoginPage.js';
+import RegisterPage from 'components/pages/RegisterPage/RegisterPage.js';
 
 const routes = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const routes = createBrowserRouter([
   {
     path: '/edit/:id',
     element: <EditPage/>
+  },
+  {
+    path: '/login',
+    element: <LoginPage/>
+  },
+  {
+    path: '/register',
+    element: <RegisterPage/>
   }
 ])
 

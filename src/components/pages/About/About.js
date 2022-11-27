@@ -1,13 +1,10 @@
-import MyHeader from "components/molecules/MyHeader.js"
-import Footer from "components/molecules/Footer.js"
+import MainTemplate from 'components/templates/MainTemplate.js'
 
 function About(){
     return(
-        <div>
-            <MyHeader h1Text = 'Logo'/>
+        <MainTemplate>
             <p>Jakis tekst</p>
-            <Footer/>
-        </div>  
+        </MainTemplate>  
     )
 }
 

@@ -35,3 +35,18 @@ export const editingMessage = (editedMessage) =>{
     body: JSON.stringify(editedMessage)
   })
 }
+
+export const addUser = (newUser) => {
+  return fetch(`${URLS.messages}/user`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+  })
+}
+
+export const getUserByEmail = (email) => {
+  return fetch(`${URLS.messages}/user?email=${email}`)
+    .then(res => res.json())
+}

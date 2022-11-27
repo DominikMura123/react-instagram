@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import WelcomeMessage from 'components/atoms/WelcomeMessage.js';
-import MessagesList from 'components/molecules/MessagesList.js'
-import MyHeader from 'components/molecules/MyHeader.js'
-import Footer from "components/molecules/Footer.js"
+import MessagesList from 'components/section/MessagesList.js'
+import MainTemplate from 'components/templates/MainTemplate.js'
 import { removeMessage,
          getMessages } from 'components/../helpers/http.js'
 
@@ -26,7 +25,7 @@ function HomePage(){
 
   return (
     <div>
-      <MyHeader h1Text = 'Logo'/> 
+      <MainTemplate>
 
       <WelcomeMessage>
         Messages List
@@ -36,7 +35,7 @@ function HomePage(){
         messages = {messages}
         handleRemove = {handleRemove}
       />
-      <Footer/>
+      </MainTemplate>
     </div>
   );
 }
