@@ -5,7 +5,8 @@ import { addUser,
          getUserByEmail } from 'components/../helpers/http.js'
 import MyInput from "components/atoms/MyInput.js"
 import MyButton from "components/atoms/MyButton.js"
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword,
+         signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../helpers/fireBase.js'
 
 function LoginRegisterForm(props){
@@ -58,7 +59,7 @@ function LoginRegisterForm(props){
 
     const handleSubmitLogin = (event) => {
         event.preventDefault();
-      
+      /*
         getUserByEmail(emailInput)
             .then(user => {
                 if (user.password === passwordInput){
@@ -67,6 +68,12 @@ function LoginRegisterForm(props){
                 else{
                     setIsLoginError(true)
                 }
+            })
+            .catch(() => setIsLoginError(true));
+     */
+            signInWithEmailAndPassword(auth, emailInput, passwordInput)
+            .then(()=>{
+                navigate('/')
             })
             .catch(() => setIsLoginError(true));
     }

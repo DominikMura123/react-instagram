@@ -5,7 +5,7 @@ function MessagesList(props){
     return(
         <ul>
         {
-          props.messages.map(message => {
+          props.messages.map((message) => {
             return (
               <li key={message.id}>
                 {message.message} - <strong>{message.author}</strong>
@@ -18,7 +18,7 @@ function MessagesList(props){
                 <Link to= {`/edit/${message.id}`}>
                 <MyButton 
                 >
-                  edit
+                edit
                 </MyButton>
                 </Link>
               </li>

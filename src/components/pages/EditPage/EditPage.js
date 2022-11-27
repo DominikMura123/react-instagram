@@ -18,8 +18,9 @@ function EditPage(){
   useEffect(()=>{
     getMessageById(params.id)
       .then(data => {
-        setAuthorInput(data.author);
-        setMessageInput(data.message);
+        const message = data.toJSON();
+        setAuthorInput(message.author);
+        setMessageInput(message.message);
       })
   }, [params.id])
 
